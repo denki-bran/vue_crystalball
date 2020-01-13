@@ -3,11 +3,20 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
+import bitsLayout from '@/layout/8bits'
+
 
 export const CrystalRouter = [
 	{
 	    path: '/clock',
-	    component: () => import('@/views/clock/index'),
+	    component: bitsLayout,
+		children: [
+			{
+			  path: '',
+			  name: '',
+			  component: () => import('@/views/clock/index')
+			}
+		]
 	  },
 
 	  {
