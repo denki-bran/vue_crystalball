@@ -5,11 +5,13 @@
 	        <p class="header">左翼大反攻</p>
 	        <p class="header">已进行：</p>
 		</div>
-		<ul class="time-clock" style="margin-top:-2rem;">
-			<li><span id="days">{{days}}</span>days</li>
-			<li><span id="hours">{{hours}}</span>Hours</li>
-			<li><span id="minutes">{{mins}}</span>Minutes</li>
-			<li><span id="seconds">{{secs}}</span>Seconds</li>
+		<ul class="time-clock time-clock-dh">
+			<li><span>{{days}}</span>days</li>
+			<li><span>{{hours}}</span>Hours</li>
+		</ul>
+		<ul class="time-clock time-clock-ms">
+			<li><span>{{mins}}</span>Minutes</li>
+			<li><span>{{secs}}</span>Seconds</li>
 		</ul>
 	</div>
 </template>
@@ -55,6 +57,9 @@
 </script>
 
 <style lang="scss" scoped>
+	.clock-container{
+		margin-top:1rem;
+	}
 	li {
       display: inline-block;
       font-size: 1.5em;
@@ -95,6 +100,7 @@
         }
       }
     }
+
 
     @media only screen and (min-width: 769px){
       .header-content{
